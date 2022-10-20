@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Portfolio</title>
+<title>Simón Martínez-Rozas</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Personal Website">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandeldFriendly" content="true">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="plugins/mCustomScrollbar/jquery.mCustomScrollbar.css">
-<link rel="stylesheet" type="text/css" href="styles/portfolio2.css">
-<link rel="stylesheet" type="text/css" href="styles/portfolio_responsive2.css">
+<link rel="stylesheet" type="text/css" href="styles/skills2.css">
+<link rel="stylesheet" type="text/css" href="styles/skills_responsive2.css">
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="styles/coverflow.css" />
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+<script src="js/sly.min.js"></script>
+
 </head>
 <body>
 
@@ -24,8 +32,8 @@
 			<div class="main_nav d-flex flex-row align-items-end justify-content-start">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li class="active"><a href="index.html">About Me</a></li>
+					<li><a href="portfolio2.html">Projects</a></li>
 					<li><a href="skills2.html">Research and Publications</a></li>
-					<li><a href="portfolio2.html">Travels and Hobbies</a></li>
 					<li><a href="contact2.html">Contact</a></li>
 				</ul>
 				<div class="header_button ml-auto">
@@ -40,14 +48,14 @@
 			<div class="menu_nav text-right">
 				<ul>
 					<li><a href="index.html">About Me</a></li>
+					<li><a href="portfolio2.html">Projects</a></li>
 					<li><a href="skills2.html">Research and Publications</a></li>
-					<li><a href="portfolio2.html">Portfolio</a></li>
 					<li><a href="contact2.html">Contact</a></li>
 				</ul>
 			</div>
 		</div>
-	</div> <!-- menu-->
-		</div> <!-- header content-->
+	</div>
+		</div>
 	</header>
 
 	<div class="content_container">
@@ -74,7 +82,7 @@
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"></div>
-								<div class="general_info_text">Location: <span><p style= "color:white">Universidad de Antofagasta, Faculty of Engineering, Department of electrical engineering</p></span> <span style="white-space: pre-line">Av.Universidad de Antofagasta (1271155). Antofagasta, Chili</span></div>
+								<div class="general_info_text">Location: <span><p style= "color:white">Universidad de Antofagasta, Engineering Faculty, Electrical Engineering Department</p></span> <span style="white-space: pre-line">Av.Universidad de Antofagasta (1271155). Antofagasta, Chili</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="images/icon_2w.png" alt=""></div>
@@ -100,177 +108,218 @@
 							</ul>
 						</div>
 					</div>
-				</div> <!-- general info content-->
-			</div> <!-- general info -->
-
-
+				</div>
+			</div>
 
 			<!-- Main Content -->
 
 			<div class="main_content">
 				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">
-					<div class="main_subtitle">What I like to do in free time</div>
-					<div class="main_title">My unofficial researches</div>
+					<div class="main_subtitle">What I have done and What I do</div>
+					<div class="main_title">Research Projects</div>
 				</div>
-
-				<!-- Sorting -->
-				<div class="portfolio_categories button-group filters-button-group">
-					<ul>
-						<li class="portfolio_category active is-checked" data-filter="*">All</li>
-						<li class="portfolio_category" data-filter=".p_animals">Animals</li>
-						<li class="portfolio_category" data-filter=".p_photography">Photography</li>
-                        <li class="portfolio_category" data-filter=".p_travels">Travels</li>
-						<li class="portfolio_category" data-filter=".p_design">Design</li>
-					</ul>
-				</div>
-
 				<!--<div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark"> -->
-					<div class="portfolio_grid grid clearfix">
-
-						<!-- Portfolio Item -->
-						<div class="grid-item portfolio_item p_animals">
-							<img src="images/portfolio/animals/animals1.png" alt="">
-							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-								<div class="portfolio_item_title">Animals</div>
-								<div class="portfolio_item_link"><a href="https://www.instagram.com/escuadron_peludo/">See More</a></div>
+					<div class="about_content">
+						<div class="about_text">
+                            <div class="project_item d-flex flex-lg-row flex-column align-items-start justfy-content-start">
+                            <div><div class="project_year">2019-Present</div></div>
+							<!--<div><div class="project_image"><img src="images/logo_upo.png" alt=""></div></div>-->
+							<div class="project_content">
+								<div class="project_title_container">
+									<div class="project_title">LiDomNET</div>
+									<div class="project_subtitle">Planification, perception and cooperative navigation in UAVS systems in cooperation with UGV</div>
+								</div>
+								<div class="project_text">
+									<p style="font-size:18px" align="justify">The aim of this project is to design and train a novel Artificial Neural Network (ANN): LiDomNet. The goal of this network 
+                                    is to recover odometry (i.e., a quaternion describing rotation and a traslation vector) corresponding to movement between two consecutive 3D point-clouds. For this 
+                                    purpose, we have used public KITTI dataset which provides, among other data, measurements from a 3D LiDar with 64 beams, attached on the top of a moving car. In addition, 
+                                    they provide real data of car’s movement gathered with an Inertial Measurement Unit (IMU). This project is yet active.</p>
+								</div>
 							</div>
-						</div>
-
-						<!-- Portfolio Item -->
-						<div class="grid-item portfolio_item p_photography">
-							<img src="images/portfolio/photography/001.JPG" alt="">
-							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-								<div class="portfolio_item_title">Photography</div>
-							</div>
-						</div>
-
-						<!-- Portfolio Item -->
-						<div class="grid-item portfolio_item p_design">
-							<img src="images/portfolio/design/ocana_logo.jpeg" alt="">
-							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-								<div class="portfolio_item_title">Design</div>
-								<div class="portfolio_item_link"><a href="https://www.tercerainformacion.es/articulo/cultura/23/03/2017/70-aniversario-de-ocana-presentacion-del-mural-restaurado-y-ocana70/">See More</a></div>
-							</div>
-						</div>
-                        
-                        <!-- Portfolio Item -->
-                        <div class="grid-item portfolio_item p_travels">
-                            <img src="images/portfolio/travels/DSC03854.JPG" alt="">
-                            <div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-                                <div class="portfolio_item_title">Travels</div>
-                                <div class="portfolio_item_link">Budapest</div>
                             </div>
-                        </div>
-
-						<!-- Portfolio Item -->
-						<div class="grid-item portfolio_item p_animals">
-							<img src="images/portfolio/animals/animals2.png" alt="">
-							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-								<div class="portfolio_item_title">Animals</div>
-								<div class="portfolio_item_link"><a href="https://www.instagram.com/escuadron_peludo/">See More</a></div>
+                            <div class="project_item d-flex flex-lg-row flex-column align-items-start justfy-content-start">
+                            <div><div class="project_year">2018-2019</div></div>
+							<!--<div><div class="project_image"><img src="images/logo_upo.png" alt=""></div></div>-->
+							<div class="project_content">
+								<div class="project_title_container">
+									<div class="project_title"><a href="https://siar.idmind.pt/" target="blanck">SIAR</a></div>
+									<div class="project_subtitle">Sewer Inspection Autonomous Robot (ECHORD++)</div>
+								</div>
+								<div class="project_text">
+									<p style="font-size:18px" align="justify">The SIAR project will develop a fully autonomous ground robot able to autonomously navigate and inspect 
+                                    the sewage system with a minimal human intervention, and with the possibility of manually controlling the vehicle or the sensor payload when required.
+                                    The project uses as starting point IDMind’s robot platform RaposaNG. A new robot will be built based on this know-how, with the following key steps beyond 
+                                    the state of the art required to properly address the challenge: a robust IP67 robot frame designed to work in the hardest environmental conditions with 
+                                    increased power autonomy and flexible inspection capabilities; robust and increased communication capabilities; onboard autonomous navigation and inspection 
+                                    capabilities; usability and cost effectiveness of the developed solution. UPO leads the navigation tasks on the project</p>
+								</div>
 							</div>
-						</div>
-
-						<!-- Portfolio Item -->
-						<div class="grid-item portfolio_item p_photography">
-							<img src="images/portfolio/photography/IMG_2629.JPG" alt="">
-							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-								<div class="portfolio_item_title">Photography</div>
-							</div>
-						</div>
-                        
-                        <!-- Portfolio Item -->
-						<div class="grid-item portfolio_item p_animals">
-							<img src="images/portfolio/animals/animals3.png" alt="">
-							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-								<div class="portfolio_item_title">Animals</div>
-								<div class="portfolio_item_link"><a href="https://www.instagram.com/escuadron_peludo/">See More</a></div>
-							</div>
-						</div>
-                        
-                        <!-- Portfolio Item -->
-                        <div class="grid-item portfolio_item p_travels">
-                            <img src="images/portfolio/travels/DSC03413.JPG" alt="">
-                            <div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-                                <div class="portfolio_item_title">Travels</div>
-                                <div class="portfolio_item_link">Warsaw</div>
                             </div>
-                        </div>
-                        
-                        <!-- Portfolio Item -->
-						<div class="grid-item portfolio_item p_animals">
-							<img src="images/portfolio/animals/animals4.png" alt="">
-							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-								<div class="portfolio_item_title">Animals</div>
-								<div class="portfolio_item_link"><a href="https://www.instagram.com/escuadron_peludo/">See More</a></div>
+                            <div class="project_item d-flex flex-lg-row flex-column align-items-start justfy-content-start">
+                            <div><div class="project_year">2016-2018</div></div>
+							<!--<div><div class="project_image"><img src="images/logo_upo.png" alt=""></div></div>-->
+							<div class="project_content">
+								<div class="project_title_container">
+									<div class="project_title"><a href="https://github.com/robotics-upo/OCELLIMAV-Project" target="blanck">OCELLIMAV</a></div>
+									<div class="project_subtitle">New sensing and navigation systems based on <i>Drosophilas</i>' ocelli for Micro Aerial Vehicles</div> <!--Supported by MINECO (Spain) grant OCELLIMAV (TEC-61708-EXP)-->
+								</div>
+								<div class="project_text">
+									<p style="font-size:18px" align="justify">Micro unmanned Aerial Vehicles (MAVs) may open up a new plethora of applications for aerial robotics, both in indoor and outdoors scenarios. 
+                                    However, the limited payload of these vehicles limits the sensors and processing power that can be carried by MAVs, and, thus, the level of autonomy 
+                                    they can achieve without relying on external sensing and processing. Flying insects, like Drosophila, on the other hand, can carry out impressive maneuvers
+                                    with a relatively small neural system. This project will explore the biological fundamentals of Drosophilas ocelli sensory-motor system, one of the mechanisms 
+                                    most likely related to fly stabilization, and the possibility to derive new sensing and navigation systems for MAVs from it.The project will do it by a complete 
+                                    reverse engineering of the ocelli system, estimating the structure and functionality of its neural processing network, and then modeling it through the interaction 
+                                    of biological and engineering research. Novel genetic-based neural tracing methods will be employed to extract the topology of the neural network, and behavioral 
+                                    experiments will be devised to determine the functionalities of specific neurons. The findings will be used to derive a model, and this model will be used to 
+                                    characterize the relevant aspects from the point of view of estimation and control. The model will also serve to determine the adaptation of this sensory-motor system 
+                                    to current MAV platforms, and to design of a proof of concept sensing and navigation system.</p>
+                                    <div class="row justify-content-center"><div class="project_image column"><img src="images/papers/ocelli_3.png" alt="" width="480" height="180"></div>
+                                    <div class="project_image column"><img src="images/papers/ICRA_network2.png" alt="" width="580" height="180"></div>
+                                    </div>
+								</div>
 							</div>
-						</div>
-                        
-                        <!-- Portfolio Item -->
-						<div class="grid-item portfolio_item p_design">
-							<img src="images/portfolio/design/def_3_blurred.png" alt="">
-							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-								<div class="portfolio_item_title">Design</div>
-							</div>
-						</div>
-                    
-                        <!-- Portfolio Item -->
-						<div class="grid-item portfolio_item p_animals">
-							<img src="images/portfolio/animals/animals5.png" alt="">
-							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-								<div class="portfolio_item_title">Animals</div>
-								<div class="portfolio_item_link"><a href="https://www.instagram.com/escuadron_peludo/">See More</a></div>
-							</div>
-						</div>
-                        
-                        <!-- Portfolio Item -->
-                        <div class="grid-item portfolio_item p_travels">
-                            <img src="images/portfolio/travels/DSC03909.JPG" alt="">
-                            <div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-                                <div class="portfolio_item_title">Travels</div>
-                                <div class="portfolio_item_link">Croatia</div>
                             </div>
-                        </div>
-                    
-                        <!-- Portfolio Item -->
-						<div class="grid-item portfolio_item p_animals">
-							<img src="images/portfolio/animals/animals6.png" alt="">
-							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-								<div class="portfolio_item_title">Animals</div>
-								<div class="portfolio_item_link"><a href="https://www.instagram.com/escuadron_peludo/">See More</a></div>
-							</div>
 						</div>
-                        <!-- Portfolio Item -->
-						<div class="grid-item portfolio_item p_animals">
-							<img src="images/portfolio/animals/animals7.png" alt="">
-							<div class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
-								<div class="portfolio_item_title">Animals</div>
-								<div class="portfolio_item_link"><a href="https://www.instagram.com/escuadron_peludo/">See More</a></div>
-							</div>
-						</div>
+
+					</div>
 				<!--</div>-->
-                    </div>
-            </div> <!--main content -->
-       </div> <!-- main content_outer-->
-    </div> <!-- content container-->     
-    
+                <div class="main_title_container d-flex flex-column align-items-start justify-content-end">
+					<div class="main_title">Publications</div>
+				</div>
+                <div class="about-content">
+                    <div class="about_text">
+                        <div class="project_item d-flex flex-lg-row flex-column align-items-start justfy-content-start">
+                            <div><div class="project_year">2019</div></div>
+                            <div class="project_content">
+								<div class="project_title_container">
+									<div class="project_title"><a href="https://ieeexplore.ieee.org/document/8794057" target="blanck">Bioinspired Direct Visual Estimation of Attitude 
+                                    Rates with Very Low Resolution Images using Deep Networks</a></div>
+									<div class="project_subtitle">IEEE International Conference on Robotics and Automation (ICRA) 2019</div> <!--Supported by MINECO (Spain) grant OCELLIMAV (TEC-61708-EXP)-->
+								</div>
+								<div class="project_text">
+									<p style="font-size:18px" align="justify"> <i>Abstract</i>— In this work we present a bioinspired visual system sensor to estimate angular rates in 
+                                    unmanned aerial vehicles (UAV) using Neural Networks. We have conceived a hardware setup to emulate <i>Drosophila</i>’s ocellar system, three simple 
+                                    eyes related  to  stabilization.  This  device  is  composed  of  three  low resolution cameras with a similar spatial configuration as the ocelli. 
+                                    There have been previous approaches based on this ocellar system, most of them considering assumptions such as known light source direction or a punctual 
+                                    light source. In contrast, here we present a learning approach using Artificial Neural Networks in order to recover the system’s angular rates indoor and 
+                                    outdoor without previous knowledge. A classical computer vision based method is also derived to be used as a benchmark for the learning approach. The method 
+                                    is validated with a large dataset of images (more than half a million samples) including synthetic and real data. The source code of the algorithms and 
+                                    the datasets used in this paper have been released in an open repository. <br><br>
+                                    
+                                    <a href="https://robotics.upo.es/papers/icra19ocelli.pdf">[PDF]</a> <a href="https://github.com/robotics-upo/OCELLIMAV-Project">[Code]</a> <a href="https://github.com/robotics-upo/OCELLIMAV-Project/tree/master/data">[Dataset]</a> <a href="images/publications/icra19/bibtex.bib">[BibTeX]</a>
+                                    <br><br>
+                                    </p>
+                                    
+                                    <div class="wrap" id="crossflowimages_icra" style="margin:0 auto;">
+                                        <div class="scrollbar">
+                                            <div class="handle">
+                                                <div class="mousearea"></div>
+                                            </div>
+                                        </div>
 
-<div align='right' class="justify-content-right">
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Modification of an original template by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-		
+                                        <div class="frame coverflow">
+                                            <ul class="clearfix">
+                                            <li>Holder</li>
+                                            </ul>
+                                        </div>
+
+                                        <ul class="pages"></ul>
+
+                                    </div>
+                                    <!-- Following script should always follow Coverflow HTML markup, or even better, added to the bottom of the page -->
+                                    <script src="js/coverflow_icra.js">
+                                    /***********************************************
+                                    * Coverflow Image Gallery: Dynamic Drive DHTML code library (www.dynamicdrive.com)
+                                    * Uses Sly scrolling lib
+                                    * Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+                                    ***********************************************/
+                                    </script>
+								</div> <!-- end of project-text -->
+                            </div> <!-- end of project-content?-->
+                        </div> <!-- end of project-item?-->
+                        
+                        
+                        
+                        <div class="project_item d-flex flex-lg-row flex-column align-items-start justfy-content-start">
+                            <div><div class="project_year">2017</div></div>
+                            <div class="project_content">
+								<div class="project_title_container">
+									<div class="project_title"><a href="https://robotics.upo.es/papers/icuas2017.pdf" target="blanck"> Bioinspired Vision-only UAV Attitude Rate Estimation using Machine Learning.</a></div>
+									<div class="project_subtitle">Proceedings of the International Conference on Unmanned Aircraft Systems, ICUAS (2017)</div> <!--Supported by MINECO (Spain) grant OCELLIMAV (TEC-61708-EXP)-->
+								</div>
+								<div class="project_text">
+									<p style="font-size:18px" align="justify"><i>Abstract</i>— This paper presents a bioinspired system for attitude rate estimation using visual sensors for aerial vehicles. The sensorial system consists
+                                    of three small low-resolution cameras (10x8  pixels), and is based on insect ocelli, a set of three simple eyes related to flight stabilization. Most previous approaches
+                                    inspired by the ocellar system use model-based techniques and consider different assumptions, like known light source direction. Here, a learning approach is employed,
+                                    using Artificial  Neural  Networks, in which the system is trained to recover the angular rates in different illumination scenarios with unknown light source direction.
+                                    We present a study using real data in an indoor setting, in which we evaluate different network architectures and inputs.<br><br>
+                                    
+                                    <a href="https://robotics.upo.es/papers/icuas2017.pdf">[PDF]</a>
+                                    <br><br>
+                                    </p>
+                                   <div class="wrap" id="crossflowimages_icuas" style="margin:0 auto;">
+                                        <div class="scrollbar">
+                                            <div class="handle">
+                                                <div class="mousearea"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="frame coverflow">
+                                            <ul class="clearfix">
+                                            <li>Holder</li>
+                                            </ul>
+                                        </div>
+
+                                        <ul class="pages"></ul>
+
+                                    </div>
+                                    <!-- Following script should always follow Coverflow HTML markup, or even better, added to the bottom of the page -->
+                                    <script src="js/coverflow_icuas.js">
+                                    /***********************************************
+                                    * Coverflow Image Gallery: Dynamic Drive DHTML code library (www.dynamicdrive.com)
+                                    * Uses Sly scrolling lib
+                                    * Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+                                    ***********************************************/
+                                    </script>
+                                   
+                                   
+								</div> <!-- end of project-text -->
+                            </div> <!-- end of project-content-->
+                        </div> <!-- end of project-item-->
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                
+			</div>
+			  <!--  <div class="main_twitter_container">
+				    <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/FlorianoMerida?ref_src=twsrc%5Etfw">Tweets by FlorianoMerida</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div> -->
+		</div>
+
+
+	</div>
+
+
 </div>
-
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
 <script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/progressbar/progressbar.js"></script>
 <script src="plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
 <script src="plugins/easing/easing.js"></script>
-<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-<script src="plugins/Isotope/fitcolumns.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/portfolio.js"></script>
+<script src="js/custom.js"></script>
 </body>
 </html>
